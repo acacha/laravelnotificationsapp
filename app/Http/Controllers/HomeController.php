@@ -1,4 +1,4 @@
-<?php namespace App\Http\Controllers;
+<?php namespace LaravelNotificationApp\Http\Controllers;
 
 class HomeController extends Controller {
 

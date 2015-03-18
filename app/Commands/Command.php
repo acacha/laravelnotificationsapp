@@ -1,4 +1,4 @@
-<?php namespace App\Commands;
+<?php namespace LaravelNotificationApp\Commands;
 
 abstract class Command {
 

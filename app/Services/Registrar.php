@@ -1,6 +1,6 @@
-<?php namespace App\Services;
+<?php namespace LaravelNotificationApp\Services;
 
-use App\User;
+use LaravelNotificationApp\User;
 use Validator;
 use Illuminate\Contracts\Auth\Registrar as RegistrarContract;
 
