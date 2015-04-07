@@ -45,12 +45,12 @@
 
 .calc-grid-column(@index, @class, @type) when (@type = width) and (@index > 0) {
   .col-@{class}-@{index} {
-    width: percentage((@index / @grid-columns));
+    width: ~`(""+((@{index} / @{grid-columns}) * 100)).substring(0, (@{index} / @{grid-columns} < 0.1 ? 5 : 6))+"%"`;
   }
 }
 .calc-grid-column(@index, @class, @type) when (@type = push) and (@index > 0) {
   .col-@{class}-push-@{index} {
-    left: percentage((@index / @grid-columns));
+    left: ~`(""+((@{index} / @{grid-columns}) * 100)).substring(0, (@{index} / @{grid-columns} < 0.1 ? 5 : 6))+"%"`;
   }
 }
 .calc-grid-column(@index, @class, @type) when (@type = push) and (@index = 0) {
@@ -60,7 +60,7 @@
 }
 .calc-grid-column(@index, @class, @type) when (@type = pull) and (@index > 0) {
   .col-@{class}-pull-@{index} {
-    right: percentage((@index / @grid-columns));
+    right: ~`(""+((@{index} / @{grid-columns}) * 100)).substring(0, (@{index} / @{grid-columns} < 0.1 ? 5 : 6))+"%"`;
   }
 }
 .calc-grid-column(@index, @class, @type) when (@type = pull) and (@index = 0) {
@@ -70,7 +70,7 @@
 }
 .calc-grid-column(@index, @class, @type) when (@type = offset) {
   .col-@{class}-offset-@{index} {
-    margin-left: percentage((@index / @grid-columns));
+    margin-left: ~`(""+((@{index} / @{grid-columns}) * 100)).substring(0, (@{index} / @{grid-columns} < 0.1 ? 5 : 6))+"%"`;
   }
 }
 
