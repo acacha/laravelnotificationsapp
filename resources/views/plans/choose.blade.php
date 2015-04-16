@@ -4,7 +4,7 @@
     <div class="position-relative">
         @if (isset($subscriptionresult))
             <div class="alert alert-info">
-                <strong>Suscription done!<br>
+                <strong>Suscription to plan: {{ $plan }} done!<br>
             </div>
         @endif
     </div>
@@ -67,6 +67,7 @@
                         <div class="btn btn-block btn-warning">
                             <form action="" method="POST">
                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                    <input type="hidden" name="plan" value="basic">
                                     <script
                                             src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                                             data-key="pk_test_K19paoH5iQhKhLqvxt5STeRm"
@@ -133,6 +134,7 @@
                         <div class="btn btn-block btn-primary">
                             <form action="" method="POST">
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                <input type="hidden" name="plan" value="starter">
                                 <script
                                         src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                                         data-key="pk_test_K19paoH5iQhKhLqvxt5STeRm"

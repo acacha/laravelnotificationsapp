@@ -22,9 +22,12 @@ class PlansController extends Controller {
     public function postChoose(){
         //Uncomment for debugging
         //dd(Input::all());
-        $token = Input::get('stripeToken');
-        Auth::user()->subscription('basic')->create($token);
 
-        return view('plans.choose')->with('subscriptionresult',1);
+        $token = Input::get('stripeToken');
+        $plan = Input::get('plan');
+        Auth::user()->subscription($plan)->create($token);
+
+        return view('plans.choose')->with('subscriptionresult',1)->with('plan',$plan);
+
     }
 }
