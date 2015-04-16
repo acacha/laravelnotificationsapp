@@ -20,7 +20,7 @@ return [
 	],
 
 	'mandrill' => [
-		'secret' => '',
+		'secret' => $_ENV['MANDRILL_KEY'],
 	],
 
 	'ses' => [
@@ -31,7 +31,7 @@ return [
 
 	'stripe' => [
 		'model'  => 'User',
-		'secret' => '',
+		'secret' => $_ENV['STRIPE_API_SECRET'],
 	],
 
 ];

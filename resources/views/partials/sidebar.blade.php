@@ -48,6 +48,15 @@
             <b class="arrow"></b>
         </li>
 
+        <li class="">
+            <a href="/plans/choose">
+                <i class="menu-icon fa fa-home"></i>
+                <span class="menu-text"> Plans </span>
+            </a>
+
+            <b class="arrow"></b>
+        </li>
+
        
         <li class="">
             <a href="#" class="dropdown-toggle">

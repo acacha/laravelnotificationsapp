@@ -12,6 +12,8 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 
 	use Authenticatable, CanResetPassword, Billable;
 
+    protected $dates = ['trial_ends_at', 'subscription_ends_at'];
+
 	/**
 	 * The database table used by the model.
 	 *
